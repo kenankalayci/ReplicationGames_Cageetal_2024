@@ -1,0 +1,19 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{\shortstack{Local\\index}}&\multicolumn{1}{c}{\shortstack{Local\\references}}&\multicolumn{1}{c}{\shortstack{National\\references}}\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+\hline
+Firm don.       &   -0.217\sym{***}&   -0.281\sym{***}&    0.267\sym{***}\\
+                &  (0.057)         &  (0.098)         &  (0.103)         \\
+[1em]
+Firm don.$^2$   &   -0.016\sym{**} &   -0.011         &    0.031\sym{**} \\
+                &  (0.008)         &  (0.014)         &  (0.015)         \\
+\hline
+Observations    &     2602         &     2602         &     2602         \\
+Mean outcome before ban&   -0.652         &    1.375         &    3.031         \\
+R2-Within       &    0.039         &    0.028         &    0.013         \\
+\hline\hline
+\end{tabular}
+}

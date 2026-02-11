@@ -1,0 +1,31 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{\shortstack{Local\\index}}&\multicolumn{1}{c}{\shortstack{Local\\references}}&\multicolumn{1}{c}{\shortstack{National\\references}}\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+\hline
+Corportate donations (loss)&   -0.176\sym{***}&   -0.344\sym{***}&    0.110         \\
+                &  (0.056)         &  (0.111)         &  (0.091)         \\
+[1em]
+Firm don.*Female&    0.041         &    0.025         &   -0.090         \\
+                &  (0.086)         &  (0.146)         &  (0.161)         \\
+[1em]
+Firm don.*Re-run&    0.117         &    0.239         &   -0.097         \\
+                &  (0.092)         &  (0.180)         &  (0.149)         \\
+[1em]
+Firm don.*Incumbent&   -0.057         &   -0.046         &    0.113         \\
+                &  (0.082)         &  (0.145)         &  (0.146)         \\
+[1em]
+Firm don.*Mayor &    0.014         &   -0.038         &   -0.059         \\
+                &  (0.075)         &  (0.132)         &  (0.140)         \\
+[1em]
+Firm don.*Other mandates&   -0.133\sym{*}  &   -0.227\sym{*}  &    0.087         \\
+                &  (0.077)         &  (0.118)         &  (0.196)         \\
+\hline
+Observations    &     2602         &     2602         &     2602         \\
+Mean outcome before ban&   -0.652         &    1.375         &    3.031         \\
+R2-Within       &    0.041         &    0.032         &    0.013         \\
+\hline\hline
+\end{tabular}
+}

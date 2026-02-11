@@ -1,0 +1,28 @@
+# Data files (must be obtained from ICPSR, see README)
+data/raw/**/*.dta
+data/raw/**/*.csv
+data/output/**/*.dta
+data/temp/**/*.dta
+
+# Keep directory structure
+!data/raw/**/
+!data/output/
+!data/temp/
+
+# Stata temp files
+*.log
+*.smcl
+
+# LaTeX build artifacts
+report/*.aux
+report/*.bbl
+report/*.blg
+report/*.log
+report/*.out
+report/*.synctex.gz
+report/*.fls
+report/*.fdb_latexmk
+
+# OS files
+.DS_Store
+Thumbs.db

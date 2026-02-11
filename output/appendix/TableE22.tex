@@ -1,0 +1,31 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{\shortstack{Total\\revenue}}&\multicolumn{1}{c}{\shortstack{Donations\\from individuals}}&\multicolumn{1}{c}{\shortstack{Party\\contributions}}&\multicolumn{1}{c}{\shortstack{Personal\\contributions}}\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}\cmidrule(lr){5-5}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         &\multicolumn{1}{c}{(4)}         \\
+\hline
+Communist*Firm don.&   -0.640\sym{***}&    0.022         &    0.141\sym{***}&    0.197\sym{***}\\
+                &  (0.063)         &  (0.060)         &  (0.053)         &  (0.053)         \\
+[1em]
+Green*Firm don. &    0.253         &    0.075         &   -1.331\sym{***}&    2.508\sym{***}\\
+                &  (0.297)         &  (0.099)         &  (0.100)         &  (0.178)         \\
+[1em]
+Socialist*Firm don.&   -0.650\sym{***}&    0.093\sym{***}&    0.153\sym{***}&    0.104\sym{***}\\
+                &  (0.037)         &  (0.021)         &  (0.032)         &  (0.030)         \\
+[1em]
+Right*Firm don. &   -0.709\sym{***}&    0.044\sym{*}  &    0.181\sym{***}&    0.066\sym{***}\\
+                &  (0.037)         &  (0.025)         &  (0.031)         &  (0.026)         \\
+[1em]
+Far-right*Firm don.&   -1.658\sym{**} &   -0.524\sym{**} &    0.129\sym{*}  &   -0.263         \\
+                &  (0.725)         &  (0.255)         &  (0.077)         &  (0.554)         \\
+[1em]
+Other*Firm don. &   -0.689\sym{***}&    0.026         &    0.089         &    0.196\sym{***}\\
+                &  (0.117)         &  (0.059)         &  (0.056)         &  (0.074)         \\
+\hline
+Observations    &     2828         &     2828         &     2828         &     2828         \\
+Mean outcome    &    0.515         &    0.060         &    0.145         &    0.089         \\
+R2-Within       &    0.566         &    0.050         &    0.090         &    0.084         \\
+\hline\hline
+\end{tabular}
+}

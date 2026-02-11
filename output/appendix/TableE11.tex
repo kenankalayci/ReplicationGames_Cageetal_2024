@@ -1,0 +1,16 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+\hline\hline
+                &\multicolumn{1}{c}{\shortstack{Candidate in\\next election}}&\multicolumn{1}{c}{\shortstack{Manifesto\\available}}&\multicolumn{1}{c}{\shortstack{Party in\\next election}}\\\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+                &\multicolumn{1}{c}{(1)}         &\multicolumn{1}{c}{(2)}         &\multicolumn{1}{c}{(3)}         \\
+\hline
+Firm donations  &    0.026\sym{**} &   -0.003         &    0.004         \\
+                &  (0.011)         &  (0.008)         &  (0.003)         \\
+\hline
+Observations    &     5082         &     1713         &     2508         \\
+Mean outcome before ban&    0.337         &    0.256         &    0.959         \\
+R2-Within       &    0.028         &    0.011         &    0.005         \\
+\hline\hline
+\end{tabular}
+}
