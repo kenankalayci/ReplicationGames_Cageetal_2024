@@ -1,5 +1,6 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \geometry{tmargin=1in,bmargin=1in,lmargin=1.2in,rmargin=1.2in}
 \usepackage[english]{babel}
@@ -95,10 +96,10 @@ Authors:
 Andriyanto: University of Queensland. E-mail: \href{mailto:andriyanto@uq.edu.au}{andriyanto@uq.edu.au} (corresponding author).
 Eugster, Nicolas: University of Queensland. E-mail: \href{mailto:nicolas.eugster@gmail.com}{nicolas.eugster@gmail.com}.
 Huang, Guan-Jia: University of Queensland. E-mail: \href{mailto:guanjia.huang@student.uq.edu.au}{guanjia.huang@student.uq.edu.au}.
-Kalayci, Kenan: University of Queensland. E-mail: \href{mailto:k.kalayci@uq.edu.au}{k.kalayci@uq.edu.au}.
+Kalaycı, Kenan: University of Queensland. E-mail: \href{mailto:k.kalayci@uq.edu.au}{k.kalayci@uq.edu.au}.
 We declare no conflict of interest with the original authors. See I4R's conflict of interest policy here: \url{https://i4replication.org/conflict.html}.}
 }
-\author{Andriyanto, Nicolas Eugster, Guan-Jia Huang, Kenan Kalayci}
+\author{Andriyanto, Nicolas Eugster, Guan-Jia Huang, Kenan Kalaycı}
 
 \maketitle
 
@@ -245,6 +246,11 @@ Details are provided in Table \ref{tab:reppkg_table}.
 %\end{spacing}
 %\end{footnotesize}
 %
+\subsection{Pre-registration}
+\begin{spacing}{1.5}
+The original study was not pre-registered and no pre-analysis plan was filed.
+\end{spacing}
+
 %\clearpage
 %%---------------------------------------------------------------------------------
 
@@ -339,10 +345,26 @@ Overall, we assess the main claims of \cite{Cage} as well-supported by the data.
 %%---------------------------------------------------------------------------------
 \section{Figures}
 
-% Note: Figures 2a, 2b, and 3 from the original paper can be reproduced
-% by running the replication_master.do file in the replication package.
-% The code generates Figure2a.pdf, Figure2b.pdf, and Figure3.pdf.
-\textit{Figures 2a, 2b, and 3 to be included upon running the Stata replication code. The relevant do-files generate Figures~2a (candidate-level determinants of firm donations), 2b (amount of firm donations), and~3 (campaign revenue composition in 1993 and 1997).}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{Figure2a.pdf}
+\caption{Candidate-level determinants of firm donations (reproduced from original paper, Figure~2a).}
+\label{fig:figure2a}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{Figure2b.pdf}
+\caption{Amount of firm donations (reproduced from original paper, Figure~2b).}
+\label{fig:figure2b}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{Figure3.pdf}
+\caption{Campaign revenue composition in 1993 and 1997 (reproduced from original paper, Figure~3).}
+\label{fig:figure3}
+\end{figure}
 
 \begin{figure}[htbp]
 \centering
