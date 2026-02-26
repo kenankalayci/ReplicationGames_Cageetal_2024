@@ -82,7 +82,8 @@ local j=`j'+1
 
 use "$temp/analysis", clear
 winsor2 std_dons_firms, cuts(1 99) replace
-
+* remove previously generated variables from earlier loop iterations
+*capture drop disp_*
 
 keep if `out'!=. & sample_rest==1 & sample_did==1
 
@@ -115,7 +116,7 @@ estadd scalar ymean=r(mean)
 estimate store indiv_`j'
 }
 
-esttab indiv_1 indiv_2 indiv_3 using "$main/Table3w.tex", ///
+esttab indiv_1 indiv_2 indiv_3 using "$main/Table3pwinzor.tex", ///
 replace keep(std_dons_firms)  ///
 cells("b(fmt(3)) se(fmt(3) par) p(fmt(3) par)") ///
 unstack style(tex) lines compress star(* 0.10 ** 0.05 *** 0.01) nonotes ///
@@ -167,7 +168,7 @@ estadd scalar ymean=r(mean)
 estimate store indiv_`j'
 }
 
-esttab indiv_1 indiv_2 indiv_3 indiv_4 using "$main/Table4w.tex", ///
+esttab indiv_1 indiv_2 indiv_3 indiv_4 using "$main/Table4pwinzor.tex", ///
 replace keep(std_dons_firms)  ///
 cells("b(fmt(3)) se(fmt(3) par) p(fmt(3) par)") ///
 unstack style(tex) lines compress star(* 0.10 ** 0.05 *** 0.01) nonotes ///
@@ -187,6 +188,7 @@ local i=`i'+1
 
 use "$temp/analysis", clear
 winsor2 std_dons_firms, cuts(1 99) replace
+
 keep if `out'!=. & sample_rest==1 & sample_did==1
 
 foreach p in "FN" "UMP" "PS" "PC" "Verts" "other"{
@@ -227,6 +229,7 @@ local i=`i'+1
 
 use "$temp/analysis", clear
 winsor2 std_dons_firms, cuts(1 99) replace
+
 keep if `out'!=. & sample_rest==1 & sample_did==1
 
 assert bigparty!="other"
@@ -270,7 +273,7 @@ estadd scalar ymean=r(mean)
 estimate store m_`i'
 }
 
-esttab m_* using "$main/Table5w.tex", ///
+esttab m_* using "$main/Table5pwinzor.tex", ///
 replace keep(std_dons_firms_*) b(3) se lab nomtitles ///
 cells("b(fmt(3)) se(fmt(3) par) p(fmt(3) par)") ///
 unstack style(tex) lines compress star(* 0.10 ** 0.05 *** 0.01) nonotes ///
@@ -291,6 +294,7 @@ local j=`j'+1
 
 use "$temp/analysis", clear
 winsor2 std_dons_firms, cuts(1 99) replace
+
 
 keep if `out'!=. & sample_rest==1 & sample_did==1
 
@@ -323,7 +327,7 @@ estimate store topic_`j'
 }
 
 
-esttab topic_* using "$main/Table6w.tex", ///
+esttab topic_* using "$main/Table6pwinzor.tex", ///
 replace keep(std_dons_firms)  ///
 b(3) se lab nomtitles ///
 cells("b(fmt(3)) se(fmt(3) par) p(fmt(3) par)") ///
@@ -347,6 +351,7 @@ local j=`j'+1
 
 use "$temp/analysis", clear
 winsor2 std_dons_firms, cuts(1 99) replace
+
 
 keep if `out'!=. & sample_rest==1 & sample_did==1
 
@@ -378,7 +383,7 @@ estadd scalar ymean=r(mean)
 estimate store m1_`j'
 }
 
-esttab m1_* using "$main/Table7aw.tex", ///
+esttab m1_* using "$main/Table7apwinzor.tex", ///
 replace keep(std_dons_firms)  ///
 b(3) se lab nomtitles ///
 cells("b(fmt(3)) se(fmt(3) par) p(fmt(3) par)") ///
@@ -399,6 +404,7 @@ local j=`j'+1
 
 use "$temp/analysis", clear
 winsor2 std_dons_firms, cuts(1 99) replace
+
 
 keep if `out'!=. & sample_rest==1 & sample_did==1
 
@@ -430,7 +436,7 @@ estadd scalar ymean=r(mean)
 estimate store m1_`j'
 }
 
-esttab m1_* using "$main/Table7bw.tex", ///
+esttab m1_* using "$main/Table7bpwinzor.tex", ///
 replace keep(std_dons_firms)  ///
 b(3) se lab nomtitles ///
 cells("b(fmt(3)) se(fmt(3) par) p(fmt(3) par)") ///
@@ -448,6 +454,8 @@ scalars( "ymean Mean outcome" "r2_within R2-Within")
 * Figure 2: Candidate-level determinants of firm donations in 1993
 
 use "$temp/analysis", clear
+winsor2 std_dons_firms, cuts(1 99) replace
+
 
 keep if sample_rest==1 & year==1993
 
@@ -511,6 +519,8 @@ graph export  "$main/Figure2b.pdf", replace
 * Figure 3: Campaign revenue composition in 1993 and 1997
 
 use "$temp/analysis", clear
+winsor2 std_dons_firms, cuts(1 99) replace
+
 keep if sample_rest==1 & sample_did==1
 
 label var dons_firms "Firm donations"
