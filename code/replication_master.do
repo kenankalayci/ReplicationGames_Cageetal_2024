@@ -67,8 +67,6 @@ do "$dofiles/results/main_results.do"
 do "$dofiles/results/main_results_p.do"
 *** main paper (winsorized at 1st/99th percentiles)
 do "$dofiles/results/main_results_winzor.do"
-*** main paper (winsorized at 5th/95th percentiles)
-do "$dofiles/results/main_results_winzor5.do"
 *** main paper (positive-donation candidates only)
 do "$dofiles/results/main_results_positive.do"
 *** robustness coefficient comparison figure
@@ -81,4 +79,5 @@ do "$dofiles/results/appendix_results.do"
 ********************************************************************************
 * descriptive tables and figures
 do "$dofiles/descriptive_stats/appendix_des_statistics.do"
+
 
