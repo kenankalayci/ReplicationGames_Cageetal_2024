@@ -5,7 +5,7 @@
 
 ## Replication Team
 
-Andriyanto (corresponding author), Nicolas Eugster, Guan-Jia Huang, Kenan Kalayci
+Andriyanto, Nicolas Eugster, Guan-Jia Huang, Kenan Kalayci (corresponding author)
 
 School of Economics, The University of Queensland
 
